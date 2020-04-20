@@ -33,15 +33,15 @@ void print_board(square board[BOARD_SIZE][BOARD_SIZE]){
         for (int j = 0; j < BOARD_SIZE; j++){
             if(board[i][j].type == VALID) {
                 if(board[i][j].stack == NULL)
-                    printf("|   ");
+                    printf("| %d:  ", board[i][j].num_pieces);
                 else{
                     if (board[i][j].stack->p_color == GREEN)
-                        printf("| G ");
-                    else printf("| R ");
+                        printf("| %d:G ", board[i][j].num_pieces);
+                    else printf("| %d:R ", board[i][j].num_pieces);
                 }
             }
             else
-                printf("| - ");
+                printf("|  -  ");
         }
         printf("|\n");
     }
