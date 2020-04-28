@@ -1,7 +1,3 @@
-//
-// Created by Lili on 24/03/2020.
-//
-
 #ifndef FOCUS_GAME_INIT_H
 #define FOCUS_GAME_INIT_H
 

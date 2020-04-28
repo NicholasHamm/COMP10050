@@ -1,28 +1,21 @@
-//
-// Created by Lili on 26/03/2020.
-//
-
-//
-// Created by Lili on 24/03/2020.
-//
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "game_init.h"
 
 void initialize_players(player players[PLAYERS_NUM]) {
 
-    // implement here the functionality to initialize the players
+    // functionality to initialize the players
     for (int i = 1; i <= PLAYERS_NUM; i++) {
         printf("Insert Player%d's name\n", i);
         printf("Player%d name: ", i);
-        fgets(players[i].player_name, PLAYERS_NAME, stdin);
+        fgets(players[i].player_name, PLAYERS_NAME, stdin); // Read UI
 
-        if (i == 1) players[i].player_colour = RED;
-        if (i == 2) players[i].player_colour = GREEN;
+            if (i == 1) players[i].player_colour = RED; // Assign the colour red to player 1
+            if (i == 2) players[i].player_colour = GREEN;// Assign the colour green to player 2
 
-        players[i].player_pieces = 0;
-        players[i].opponent_pieces = 0;
+            // Initialise player_pieces and opponent_pieces to 0 for both players
+                players[i].player_pieces = 0;
+                players[i].opponent_pieces = 0;
 
     }
 }
@@ -88,7 +81,6 @@ void initialize_board(square board [BOARD_SIZE][BOARD_SIZE]){
 
 
     }
-
 
 }
 
